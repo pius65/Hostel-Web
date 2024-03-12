@@ -98,7 +98,7 @@ worker_List = []
 sms_List = []
 complains = []
 food_List = []
-room_List = []
+room_List = ["Two-Sharing","Four-Sharing"]
 request_residence=[]
 request_jobs=[]
 MyEmail = ""
@@ -506,8 +506,8 @@ def loaddataRooms():
         i = i+1
         for x in range(i, len(record)):
             startingR = startingR + record[x]
-        room = Rooms(typeR, int(priceR), int(
-            totalR), int(bookR), int(startingR))
+        room = Rooms(typeR, int(priceR),int(
+            totalR),int(bookR), int(startingR))
         room_List.append(room)
 
 # Save Data of All Ordered Foods

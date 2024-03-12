@@ -9,18 +9,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Registeration Form</title>
+    <title>Registration Form</title>
 
-    <!-- Custom fonts for this template-->
+    <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- Font Awesome -->
     <link href="{{url_for('static',filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet"
         type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    <!-- Custom styles for this template-->
+    <!-- Custom styles for this template -->
     <link href="{{url_for('static',filename='css/sb-admin-2.min-01.css')}}" rel="stylesheet">
 </head>
 
@@ -41,34 +42,31 @@
                             </div>
                             <form class="user" action="/addworker" method="POST">
                                 <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <div class="col-sm-6 mb-3">
                                         <input type="text" name="name1" class="form-control form-control-user"
-                                            id="exampleFirstName" placeholder="First Name" required="required">
+                                            id="exampleFirstName" placeholder="First Name" required>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-6 mb-3">
                                         <input type="text" name="name2" class="form-control form-control-user"
-                                            id="exampleLastName" placeholder="Last Name" required="required">
+                                            id="exampleLastName" placeholder="Last Name" required>
                                     </div>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <div class="dropdown mb-4">
-                                     &nbsp; <label for="works">Enter Work Type:</label>
-                                        <select style="box-shadow: none;border-color: #858796;" name="job" class="form-select btn btn-block btn-user" aria-label="Default select example" required="required">
-                                            <option value="Supervisor" style="outline: none;">Supervisor</option>
-                                            <option value="cleaner">Cleaner</option>
-                                            <option value="cooker">Cooker</option>
-                                            <option value="Receptioner">Receptioner</option>
+                                    <div class="col-sm-12 mb-3">
+                                        <label for="job">Select Work Type:</label>
+                                        <select name="job" class="form-select form-control-user" required>
+                                            <option value="Supervisor">Supervisor</option>
+                                            <option value="Cleaner">Cleaner</option>
+                                            <option value="Cooker">Cooker</option>
+                                            <option value="Receptionist">Receptionist</option>
                                             <option value="Security Guard">Security Guard</option>
                                         </select>
-                                    </div>                                    
+                                    </div>
                                     <div class="col-sm-12">
-                                        <input type="number" name="test_name" min="0" oninput="validity.valid||(value='');" name="salary" class="form-control form-control-user"
-                                            id="exampleSalary" placeholder="Salary..." required="required">
+                                        <input type="number" name="salary" min="0" class="form-control form-control-user"
+                                            id="exampleSalary" placeholder="Salary" required>
                                     </div>
                                 </div>
 
-                                <button class="btn btn-success btn-user btn-block">
+                                <button class="btn btn-primary btn-user btn-block">
                                     Add a Worker
                                 </button>
                                 <hr>
@@ -82,7 +80,7 @@
                         </div>
                         <hr>
                         <div class="text-center">
-                            <a class="small text-success" href="/managerhome">Go Back!</a>
+                            <a class="small text-success" href="/managerhome">Go Back</a>
                         </div>
                     </div>
                 </div>
@@ -100,6 +98,7 @@
 
     <!-- Custom scripts for all pages-->
     <script src="{{url_for('static',filename='js/sb-admin-2.min.js')}}"></script>
+    <!-- Your custom script -->
     <script src="{{url_for('static',filename='js/demo/registervalid.js')}}"></script>
 </body>
 

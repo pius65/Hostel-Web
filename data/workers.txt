@@ -1,0 +1,4 @@
+Willy Mutunga,Cleaner,5000
+Rachel Wendo,Cook,7000
+mukami kindia,Supervisor,10000
+Francis ngugi,Security Guard,6500

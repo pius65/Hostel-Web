@@ -5,19 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>Hostel Managwment System</title>
+<title>Hostel Management System</title>
 
 <!-- Custom fonts for this template -->
-<link href="{{url_for('static',filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
-<link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
 <!-- Custom styles for this template -->
-<link href="{{url_for('static',filename='css/sb-admin-2.min-02.css')}}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/sb-admin-2.min-02.css') }}" rel="stylesheet">
 
 <!-- Custom styles for this page -->
-<link href="{{url_for('static',filename='vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 {% endblock %}
 {% block navbar %}
 <!-- Sidebar -->
@@ -113,13 +111,11 @@
 {% endblock %}
 {% block body %}
 <div class="container-fluid">
-
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Ordered Foods Detail</h1>
     </div>
-    <p class="mb-4">Here is the complete Data of All ordered Foods that data contains Name,Price and Quantity.
-        Any <a class="text-info" href="#">Updation </a>in Data You Can See Here.</p>
+    <p class="mb-4">Here is the complete Data of All ordered Foods that data contains Name, Price, Quantity, and Total Cost. Any <a class="text-info" href="#">Updation </a>in Data You Can See Here.</p>
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-info">Data of Ordered Foods</h6>
@@ -132,15 +128,17 @@
                             <th>Name of Foods</th>
                             <th>Price</th>
                             <th>Quantity</th>
+                            <th>Total Cost</th> <!-- New Column -->
                         </tr>
                     </thead>
                     <tbody>
                         {% for id in foodList %}
                         <tr>
-                            <td>{{id.namefood}}</td>
-                            <td>{{id.price}}</td>
-                            <td>{{id.quantity}}
-                            </td>
+                            <td>{{ id.namefood }}</td>
+                            <td>{{ id.price }}</td>
+                            <td>{{ id.quantity }}</td>
+                            <!-- Calculate total cost for each item -->
+                            <td>{{ id.price * id.quantity }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -153,19 +151,19 @@
 
 {% block script %}
 <!-- Bootstrap core JavaScript-->
-<script src="{{url_for('static',filename='vendor/jquery/jquery.min.js')}}"></script>
-<script src="{{url_for('static',filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="{{url_for('static',filename='vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+<script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="{{url_for('static',filename='js/sb-admin-2.min.js')}}"></script>
+<script src="{{ url_for('static', filename='js/sb-admin-2.min.js') }}"></script>
 
 <!-- Page level plugins -->
-<script src="{{url_for('static',filename='vendor/datatables/jquery.dataTables.min.js')}}"></script>
-<script src="{{url_for('static',filename='vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
+<script src="{{ url_for('static', filename='vendor/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
 
 <!-- Page level custom scripts -->
-<script src="{{url_for('static',filename='js/demo/datatables-demo.js')}}"></script>
+<script src="{{ url_for('static', filename='js/demo/datatables-demo.js') }}"></script>
 {% endblock %}

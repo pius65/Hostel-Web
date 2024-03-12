@@ -12,3 +12,8 @@ Hello,owner
 I am login from mobile?,owner
 How are you?,owner
 hello I am Fine,admin
+hello,admin
+hello 65654,admin
+hello how is work,owner
+work on your management ,owner
+keep going,owner

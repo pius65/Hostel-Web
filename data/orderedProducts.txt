@@ -1,0 +1,8 @@
+ugali ugali,2,150,mukami kindiaa,123456789
+pizza nb4,4,400,mukami kindiaa,123456789
+mukimo mukimo,4,100,mukami kindiaa,123456789
+spaggetti sp,6,250,mukami kindiaa,123456789
+tea t,3,50,Sharon karimi,123456789000
+tea t,3,50,Sharon karimi,123456789000
+pizza nb4,1,400,elizabeth eli,123456789
+ugali ugali,5,150,elizabeth eli,123456789

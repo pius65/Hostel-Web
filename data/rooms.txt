@@ -1,0 +1,12 @@
+8 sharing,6500,15,30,10
+studio,26000,10,16,5
+3 sharing,7500,16,25,8
+self containeed,25000,5,10,3
+2 sharing plus meals served,14000,15,30,10
+10 sharing5,5000,15,27,9
+6 sharing plus meals,8000,15,30,10
+one room,30000,10,23,7
+5 sharing with meals included,10000,15,20,10
+1 person,13000,10,6,3
+studio 2 sharing,8500,5,2,1
+11,12455,5,3,3
