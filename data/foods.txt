@@ -1,10 +1,6 @@
-pizza nb4,400,0
-githeri githeri22,100,25
-eggs fry eggs,90,20
-ugali ugali,150,23
-chapati chapati,20,50
-spaggetti sp,250,44
-tea t,50,14
-chips chips,120,70
-mukimo mukimo,100,26
-uji uji,30,100
+pilau pl,150,99
+chips chips,150,99
+mukimo m,100,100
+distillled water water,100,200
+chapo  chapo,30,200
+tea chai,100,448

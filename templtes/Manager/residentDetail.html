@@ -6,11 +6,13 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Hostel Management System</title>
+<title>Hostel Managment System</title>
 
 <!-- Custom fonts for this template -->
 <link href="{{url_for('static',filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
 <!-- Custom styles for this template -->
 <link href="{{url_for('static',filename='css/sb-admin-2.min-01.css')}}" rel="stylesheet">
@@ -18,20 +20,6 @@
 <!-- Custom styles for this page -->
 <link href="{{url_for('static',filename='vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
 
-<style>
-    /* Style for password field to display dots */
-    .password-dot {
-        font-family: 'Arial';
-        letter-spacing: 2px;
-        -webkit-text-security: disc; /* Safari */
-        text-security: disc; /* Other modern browsers */
-    }
-
-    /* Change page background color to black */
-    body {
-        background-color: #000;
-    }
-</style>
 {% endblock %}
 
 {% block sidenavabar %}
@@ -180,7 +168,6 @@
 </ul>
 <!-- End of Sidebar -->
 {% endblock %}
-
 {% block body %}
 <!-- Begin Page Content -->
 <div class="container-fluid">
@@ -215,7 +202,7 @@
                             <td><input style="display: none;" name="myindex" value="{{loop.index}}"></input>{{loop.index}}</td>
                             <td>{{ id.name }}</td>
                             <td>{{ id.email}}</td>
-                            <td class="password-dot">{{ id.pin }}</td>
+                            <td>{{ id.pin }}</td>
                             <td><button type="submit" style="box-shadow: none;" class="btn btn-block">
                                 <span>
                                     <i class="fas fa-trash"></i>
@@ -233,7 +220,6 @@
     </div>
 </div>
 {% endblock %}
-
 {% block script %}
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>

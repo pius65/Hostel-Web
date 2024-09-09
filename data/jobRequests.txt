@@ -1,4 +1,6 @@
-Willy Mutunga,mutungawilly@gmail.com,cleaner
 Maureen wambui,wambuimaureen@gmail.com,Receptioner
 Sharon karimi,sharongatuyu@gmail.com,Receptioner
 mark kirimi,markkirimi@gmail.com,Security Guard
+irene mukami,irenemukami@gmail.com,Receptioner
+james mwenda,james00@gmail.com,Security Guard
+merab o,merab0@gmail.com,Supervisor

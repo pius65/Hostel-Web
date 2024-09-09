@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,55 +17,64 @@
 
     <!-- Custom styles for this template-->
     <link href="{{url_for('static',filename='css/sb-admin-2.min-01.css')}}" rel="stylesheet">
+
     <style>
-        body {
-            background-color: #000;
+        .bg-black {
+            background-color: #000000; /* Black background color */
         }
     </style>
+
 </head>
 
-<body>
+<body class="bg-black"> <!-- Add the custom class here -->
+
     <div class="container">
+
         <!-- Outer Row -->
         <div class="row justify-content-center">
+
             <div class="col-xl-10 col-lg-12 col-md-9">
+
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <img class="col-lg-6 d-none d-lg-block" src="static/img/undraw_posting_photo.svg">
+                                <img class="col-lg-6 d-none d-lg-block" src="static/img/undraw_posting_photo.svg">
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Profile!</h1>
                                         <h1 class="h4 text-gray-900 mb-4">Manager of Hostel!</h1>
                                     </div>
-                                    <div class="card mb-4 py-3 border-bottom-danger">
-                                        <div class="card-body">
-                                            Manager Name: {{name}}
+                                        <div class="card mb-4 py-3 border-bottom-danger">
+                                            <div class="card-body">
+                                                Manager Name is: {{ name }}
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="card mb-4 py-3 border-bottom-warning">
-                                        <div class="card-body">
-                                            Manager's Email: {{email}}
+
+                                        <div class="card mb-4 py-3 border-bottom-warning">
+                                            <div class="card-body">
+                                                Manager's Email is: {{ email }}
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="card mb-4 py-3 border-bottom-success">
-                                        <div class="card-body">
-                                            Password: <input type="password" value="{{pin}}" readonly>
+                                        <div class="card mb-4 py-3 border-bottom-success">
+                                            <div class="card-body">
+                                                Password of Account is: <span id="password">•••••••••••••••••</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <hr>
-                                    <div class="text-center">
-                                        <a class="small text-success" href="/managerhome">Go Back!</a>
+                                        <hr>
+                                        <div class="text-center">
+                                            <a class="small text-success" href="/managerhome">Go Back!</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
+
         </div>
+
     </div>
 
     <!-- Bootstrap core JavaScript-->
@@ -77,6 +87,16 @@
     <!-- Custom scripts for all pages-->
     <script src="{{url_for('static',filename='js/sb-admin-2.min.js')}}"></script>
     <script src="{{url_for('static',filename='js/demo/login.js')}}"></script>
+
+    <script>
+        // Replace password text with dots
+        document.addEventListener('DOMContentLoaded', function() {
+            var passwordField = document.getElementById('password');
+            var passwordText = passwordField.innerText;
+            var dots = '•'.repeat(passwordText.length);
+            passwordField.innerText = dots;
+        });
+    </script>
 </body>
 
 </html>
